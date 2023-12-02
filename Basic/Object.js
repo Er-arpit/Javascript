@@ -34,3 +34,5 @@ User.greetingtwo = function(){
     console.log(`Hello ${User.name}, \n Good day!\n This is regarding your network ticket.`);
 }
 console.log(User.greetingtwo());
+
+
