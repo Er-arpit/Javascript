@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Like Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Georgia;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background-color: lightseagreen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #container {
+            height: 400px;
+            width: 250px;
+            position: relative;
+            background-color: antiquewhite;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        #container img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        #dil {
+            color: #ffff;
+            font-size: 85px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 0.8;
+            transition: all ease 0.4s;
+        }
+
+        
+    </style>
+    <!-- Remix Icon link  -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="container">
+        <img src="https://images.unsplash.com/photo-1612719749696-c242fd47a391?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="insta-profile">
+        <i class="ri-heart-3-fill" id="dil"></i>
+    </div>
+
+
+    <script src="insta.js"></script>
+</body>
+
+</html>
