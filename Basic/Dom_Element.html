@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM elemnets</title>
+</head>
+<body>
+    <body style="background-color: rgb(21, 21, 21); color: aliceblue;">
+</body>
+
+<script>
+    const div = document.createElement('div')
+    div.className = 'main'
+    div.id = 223
+    div.setAttribute('title', 'genrateb title')
+    div.style.backgroundColor = 'yellow'
+    div.style.color = 'Black'
+    div.style.padding = '21px'
+    const addtext = document.createTextNode('Chai with code');
+    console.log(div);
+    div.appendChild(addtext)
+    document.body.appendChild(div)
+</script>
+</html>

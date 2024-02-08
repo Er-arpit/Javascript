@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaceBook Friend request card</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Georgia;
+        }
+        body,html{
+            height: 100%;
+            width: 100%;
+        }
+        body{
+            background-color:cornflowerblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card{
+            height: 400px;
+            width: 300px;
+            background-color: #ffff;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .card img{
+            height: 50%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        
+        #bio{
+            font-size: small;
+            padding: 10px;
+        }
+
+        .card button{
+            background-color: cornflowerblue;
+            border-radius: 15px;
+            border: none;
+            color: aliceblue;
+            font-weight: 700;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1542587329-0f49fcc4bed1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Profile_picture">
+        <h1 id="name">Monika Yadav</h1>
+        <h3 id="bio">Lorem ipsum dolor sit amet consectetur, officiis totam dolorem laborum.</h3>
+        <button class="btn">Add Friend</button>
+    </div>
+    <script src="add_friend.js"></script>
+</body>
+</html>

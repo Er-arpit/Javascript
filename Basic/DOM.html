@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parents and child elemnets</title>
+</head>
+<body style="background-color: rgb(21, 21, 21); color: aliceblue;">
+    <div class="div">
+        <!-- camment  -->
+        <div class="day">Sunday</div>
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+    </div>
+</body>
+<script>
+    let parents = document.querySelector(".div")
+    // console.log(parents);
+    // console.log(parents.children);
+    // console.log(parents.children[1]);
+    // console.log(parents.children[1].innerHTML);
+
+    for (let index = 0; index < parents.children.length; index++) {
+        // console.log(parents.children[index])
+    }
+    // parents.children[1].style.color = "red";
+
+
+    let dayele = document.querySelector(".day");
+    // console.log(dayele);
+    // console.log(dayele.parentElement);
+    // console.log(dayele.nextElementSibling);
+
+    // console.log("NODE :- ", parents.childNodes);
+    
+</script>
+</html>
