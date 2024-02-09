@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Cursur</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: georgia;
+            box-sizing: border-box;
+            color: white;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+
+        }
+
+        .main{
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cursur {
+            cursor: none;
+            height: 20px;
+            width: 20px;
+            mix-blend-mode: difference;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute ;
+            transition: all linear 0.2s;
+        }
+
+        h1{
+            font-size: 9vw;
+            font-weight: 900;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="cursur"></div>
+            <h1>Arpit</h1>
+    </div>
+</body>
+<script src="scroit.js"></script>
+</html>
