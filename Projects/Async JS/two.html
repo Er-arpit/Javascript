@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two_project</title>
+</head>
+<body>
+    <h1>Hello, Welcome to my Javascript two code</h1>
+    <button id="start">start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const randomColor = function () {
+        const hexa = '0123456789ABCDEF';
+        let color = '#';
+        for( let i = 0; i<6 ; i++){
+            color += hexa[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    let sayDate = function () { 
+        document.body.style.background = randomColor();
+    }
+
+    let intervalId ;
+    
+    document.querySelector("#start").addEventListener("click", function(){
+        if (!intervalId) {
+            intervalId = setInterval(sayDate, 1000, "hi")
+        }
+        console.log("START!!");
+    })
+    
+    document.querySelector("#stop").addEventListener("click", function(){
+        clearInterval(intervalId);
+        intervalId = null
+        console.log("STOPED!!");
+    })
+    
+</script>
+</html>

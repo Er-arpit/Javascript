@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async JS</title>
+</head>
+<body>
+    <h1>Hello, Welcome to my Javascript code</h1>
+    <button id="stop">Stop</button>
+
+
+    <script>
+        let sayArpit = function(){
+            console.log("Hello, I am Arpit.!");
+        }
+
+        let greeting = function () {
+            document.querySelector('h1').innerHTML = "Ram Ram Bhaiyo!!"
+        }
+
+        let changeme = setTimeout( sayArpit, 2000);
+        let greet = setTimeout( greeting, 2000);
+
+        document.querySelector('#stop').addEventListener('click', function() {
+            clearTimeout(changeme)          // clear timeout get only one parameter.
+            clearTimeout(greet)
+            console.log("STOPED!!");
+        })
+        
+    </script>
+</body>
+</html>

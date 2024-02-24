@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Handdling</title>
+    <style>
+        .container{
+            height: 100%;
+            width: 100%;
+            background-color: #414141;
+        }
+        #image li img{
+            height: 200px;
+            width: 200px;
+            object-fit: cover;
+            object-position: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul id="image">
+            <li> <img id="perot" src="https://cdn.pixabay.com/photo/2023/04/27/08/45/australian-king-parrot-7954026_1280.jpg" alt="">
+            </li>
+            <li> <img id="taj-mahal" src="https://cdn.pixabay.com/photo/2018/03/20/21/27/taj-mahal-3244750_1280.jpg" alt=""></li>
+            <li> <img id="cat" src="https://cdn.pixabay.com/photo/2014/03/29/09/17/cat-300572_1280.jpg" alt=""></li>
+            <li> <img id="london" src="https://cdn.pixabay.com/photo/2010/12/13/10/21/bridge-2715_960_720.jpg" alt=""></li>
+            <li> <a href="https://google.com">Click here go to Google</a></li>
+        </ul>
+    </div>
+</body>
+
+<script>
+    // document.getElementById("image").addEventListener("click", function(e){
+    //     console.log("clicked on Ul");
+    // }, false)               //BUBBLING_PHASE UP in False case.
+    // document.getElementById('cat').addEventListener("click", function(e){
+    //     console.log("clicked on cat");
+    // }, false)               .
+
+    // document.getElementById("image").addEventListener("click", function(e){
+    //     console.log("clicked on Ul");
+    // }, true)            // True case me UL pehle run hoga
+    // document.getElementById('cat').addEventListener("click", function(e){
+    //     console.log("clicked on cat");
+    // }, true)
+
+    // document.getElementById("image").addEventListener("click", function(e){
+    //     console.log("clicked on Ul");
+    // }, false)            
+    // document.getElementById('cat').addEventListener("click", function(e){
+    //     console.log("clicked on cat");
+    //     e.stopPropagation()
+    // }, false)           // Its run only clicked on cat stopPropagation() function
+
+    let img = document.querySelector('#image')
+    img.addEventListener('click', function(des){
+        if (des.target.tagName === 'IMG' ){
+        let removeit = des.target.parentNode;
+        removeit.remove()
+        }
+                // OR   
+        // removeit.parentNode.removeChild(removeit)            //its also work for remove.
+    })
+</script>
+</html>
