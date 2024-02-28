@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API DOCUMENT</title>
+</head>
+
+<body style="background-color: #212121; color: aliceblue;">
+    <h3>Hello Welcome to API tutorial</h3>
+</body>
+<script>
+    let requestedURL = 'https://api.github.com/users/hiteshchoudhary';
+    const xuser = new XMLHttpRequest();
+    xuser.open('GET', requestedURL)
+
+    xuser.onreadystatechange = function () {
+        console.log(xuser.readyState);
+        if (xuser.readyState === 4) {
+            let userdata = JSON.parse(this.responseText);
+            console.log(typeof (userdata));
+            console.log(userdata);
+        }
+    }
+    xuser.send();
+
+</script>
+
+</html>
